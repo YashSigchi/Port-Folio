@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Space_Grotesk, Inter, JetBrains_Mono, Caveat } from 'next/font/google';
+import localFont from 'next/font/local';
 import './globals.css';
 import { LenisProvider } from '@/components/ui/LenisProvider';
 import { ScrollProgress } from '@/components/ui/ScrollProgress';
@@ -10,30 +10,30 @@ import { TerminalDrawer } from '@/components/ui/TerminalDrawer';
 import { AskYashChatbot } from '@/components/chat/AskYashChatbot';
 import { profile } from '@/data/profile';
 
-const spaceGrotesk = Space_Grotesk({
-  subsets: ['latin'],
-  weight: ['500', '600', '700'],
+const spaceGrotesk = localFont({
+  src: './fonts/SpaceGrotesk-Latin.woff2',
+  weight: '500 700',
   variable: '--font-space-grotesk',
   display: 'swap',
 });
 
-const inter = Inter({
-  subsets: ['latin'],
-  weight: ['400', '500', '600'],
+const inter = localFont({
+  src: './fonts/Inter-Latin.woff2',
+  weight: '400 600',
   variable: '--font-inter',
   display: 'swap',
 });
 
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ['latin'],
-  weight: ['400', '500', '600'],
+const jetbrainsMono = localFont({
+  src: './fonts/JetBrainsMono-Latin.woff2',
+  weight: '400 600',
   variable: '--font-jetbrains-mono',
   display: 'swap',
 });
 
-const caveat = Caveat({
-  subsets: ['latin'],
-  weight: ['500', '600', '700'],
+const caveat = localFont({
+  src: './fonts/Caveat-Latin.woff2',
+  weight: '500 700',
   variable: '--font-caveat',
   display: 'swap',
 });
